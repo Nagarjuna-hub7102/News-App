@@ -5,8 +5,16 @@ export class Newsitem extends Component {
      let {title,description,imageUrl,newsUrl,author,date,source} = this.props; 
     return (
       <div className="my-3">
+       
       <div className="card" >
-        <span class="position-absolute top-0  translate-middle badge rounded-pill bg-danger" style={{left:'90%',zindex:'1'}}>{source}</span>
+      <div style={{display:'flex',
+          justifyContent:'flex-end',
+          position:'absolute',
+          right:'0'
+        }}>
+        <span class="badge rounded-pill bg-danger" >{source}</span>
+        </div>
+        
       <img src={!imageUrl?"https://assets.bwbx.io/images/users/iqjWHBFdfxIU/iPux_tTA3dHY/v0/1200x800.jpg":imageUrl} className="card-img-top" alt="..."/>
       <div className="card-body">
         <h5 className="card-title">{title}...</h5>
